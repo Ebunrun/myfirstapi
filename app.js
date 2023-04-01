@@ -2,17 +2,17 @@ import express from 'express'
 const app = express()
 const port = 3000
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 
-app.get('/login', (req, res) => {
-    res.send('Not authorized')
-  })
+// app.get('/login', (req, res) => {
+//     res.send('Not authorized')
+//   })
 
-app.get('/logout', (req, res) => {
-    res.send('Logged out')
-  })
+// app.get('/logout', (req, res) => {
+//     res.send('Logged out')
+//   })
 
 app.get('/get-time', (request, response) => {
   const today = new Date();
