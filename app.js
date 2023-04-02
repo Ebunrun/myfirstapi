@@ -20,6 +20,13 @@ app.get('/get-time', (request, response) => {
   console.log(time)
   response.send({ message:`The current time is: ${time}`})
 })
+
+app.get('/winner', (req, res) => {
+  const winner = { name: 'John Doe', phoneNumber: 08030512688, age: 30 };
+  console.log(time)
+  res.json(winner);
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
