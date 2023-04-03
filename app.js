@@ -1,6 +1,77 @@
 import express from 'express'
+var cors = require('cors')
 const app = express()
 const port = 3000
+
+app.use(cors())
+
+const winner = [
+  { 
+      name: 'John Olaniyi', 
+      email: 'john@olaniyi.com', 
+      phone: '08030512688', 
+      age: 28 
+  },
+    { 
+      name: 'Ebun Goodness', 
+      email: 'ebun@goodness.com', 
+      phone: '08030512688', 
+      age: 25 
+  },
+    { 
+      name: 'Ayuba Ezekiel', 
+      email: 'ayuba@ezekiel.com', 
+      phone: '08030512688', 
+      age: 30 
+  },
+    { 
+      name: 'Shalom Olamide', 
+      email: 'shalom@olamide.com', 
+      phone: '08030512688', age: 18 
+  },
+    { 
+      name: 'Chioma Onag', 
+      email: 'chioma@onag.com', 
+      phone: '08030512688', 
+      age: 20 
+  },
+    { 
+      name: 'Terv Igbo', 
+      email: 'terve@igbo.com', 
+      phone: '08030512688', 
+      age: 30 
+  },
+    { 
+      name: 'Esther Babs', 
+      email: 'esther@babs.com', 
+      phone: '08030512688', 
+      age: 35 
+  },
+    { 
+      name: 'Precious Ohio', 
+      email: 'precious@ohio.com', 
+      phone: '08030512688', 
+      age: 19 
+  },
+    { 
+      name: 'Dupe Ehiorobho', 
+      email: 'dupe@ehiorobho.com', 
+      phone: '08030512688', 
+      age: 22 
+  },
+    { 
+      name: 'Destiny Oraifor', 
+      email: 'destiny@oraifor.com', 
+      phone: '08030512688', 
+      age: 31 
+  },
+    { 
+      name: 'Martins Adeoti', 
+      email: 'martins@adeoti.com', 
+      phone: '08030512688', 
+      age: 37 
+  },
+]
 
 // app.get('/', (req, res) => {
 //   res.send('Hello World!')
@@ -21,24 +92,30 @@ app.get('/get-time', (request, response) => {
   response.send({ message:`The current time is: ${time}`})
 })
 
-app.get('/winner', (req, res) => {
-  const winner = [
-    { id: 0, name: 'John Olaniyi', email: 'john@olaniyi.com', phone: '08030512688', age: 28 },
-    { id: 1, name: 'Ebun Goodness', email: 'ebun@goodness.com', phone: '08030512688', age: 25 },
-    { id: 2, name: 'Ayuba Ezekiel', email: 'ayuba@ezekiel.com', phone: '08030512688', age: 30 },
-    { id: 3, name: 'Shalom Olamide', email: 'shalom@olamide.com', phone: '08030512688', age: 18 },
-    { id: 4, name: 'Chioma Onag', email: 'chioma@onag.com', phone: '08030512688', age: 20 },
-    { id: 5, name: 'Terv Igbo', email: 'terve@igbo.com', phone: '08030512688', age: 30 },
-    { id: 6, name: 'Esther Babs', email: 'esther@babs.com', phone: '08030512688', age: 35 },
-    { id: 7, name: 'Precious Ohio', email: 'precious@ohio.com', phone: '08030512688', age: 19 },
-    { id: 8, name: 'Dupe Ehiorobho', email: 'dupe@ehiorobho.com', phone: '08030512688', age: 22 },
-    { id: 9, name: 'Destiny Oraifor', email: 'destiny@oraifor.com', phone: '08030512688', age: 31 },
-    { id: 10, name: 'Martins Adeoti', email: 'martins@adeoti.com', phone: '08030512688', age: 37 },
-  ];
+app.get('/winner', (req, res) => { 
   console.log(winner)
-  res.json(winner);
+  res.send(winner)
+})
+
+app.get('/random-winner', (req, res) => { 
+  let random_winner=Math.floor(Math.random() * 11);
+  res.send(winner[random_winner])
 })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+
+// const winner = [
+  //   { id: 0, name: 'John Olaniyi', email: 'john@olaniyi.com', phone: '08030512688', age: 28 },
+  //   { id: 1, name: 'Ebun Goodness', email: 'ebun@goodness.com', phone: '08030512688', age: 25 },
+  //   { id: 2, name: 'Ayuba Ezekiel', email: 'ayuba@ezekiel.com', phone: '08030512688', age: 30 },
+  //   { id: 3, name: 'Shalom Olamide', email: 'shalom@olamide.com', phone: '08030512688', age: 18 },
+  //   { id: 4, name: 'Chioma Onag', email: 'chioma@onag.com', phone: '08030512688', age: 20 },
+  //   { id: 5, name: 'Terv Igbo', email: 'terve@igbo.com', phone: '08030512688', age: 30 },
+  //   { id: 6, name: 'Esther Babs', email: 'esther@babs.com', phone: '08030512688', age: 35 },
+  //   { id: 7, name: 'Precious Ohio', email: 'precious@ohio.com', phone: '08030512688', age: 19 },
+  //   { id: 8, name: 'Dupe Ehiorobho', email: 'dupe@ehiorobho.com', phone: '08030512688', age: 22 },
+  //   { id: 9, name: 'Destiny Oraifor', email: 'destiny@oraifor.com', phone: '08030512688', age: 31 },
+  //   { id: 10, name: 'Martins Adeoti', email: 'martins@adeoti.com', phone: '08030512688', age: 37 },
+  // ];
