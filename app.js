@@ -1,5 +1,5 @@
 import express from 'express'
-import axios from 'axios'
+var cors = require('cors')
 const app = express()
 const port = 3000
 
