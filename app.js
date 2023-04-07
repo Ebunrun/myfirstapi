@@ -1,5 +1,5 @@
 import express from 'express'
-var cors = require('cors')
+import cors from "cors"
 const app = express()
 const port = 3000
 
@@ -9,17 +9,17 @@ const winner = [
   { 
       name: 'John Olaniyi', 
       email: 'john@olaniyi.com', 
-      phone: '08030512688', 
+      phone: '080305688', 
       age: 28 
   },
     { 
-      name: 'Ebun Goodness', 
+      name: 'Ebun Christiana', 
       email: 'ebun@goodness.com', 
-      phone: '08030512688', 
+      phone: '0803088', 
       age: 25 
   },
     { 
-      name: 'Ayuba Ezekiel', 
+      name: 'Ayuba Victoria', 
       email: 'ayuba@ezekiel.com', 
       phone: '08030512688', 
       age: 30 
@@ -30,39 +30,39 @@ const winner = [
       phone: '08030512688', age: 18 
   },
     { 
-      name: 'Chioma Onag', 
+      name: 'Joy Ehi', 
       email: 'chioma@onag.com', 
       phone: '08030512688', 
       age: 20 
   },
     { 
-      name: 'Terv Igbo', 
+      name: 'Yor Igbo', 
       email: 'terve@igbo.com', 
-      phone: '08030512688', 
+      phone: '080305126', 
       age: 30 
   },
     { 
       name: 'Esther Babs', 
       email: 'esther@babs.com', 
-      phone: '08030512688', 
+      phone: '080512688', 
       age: 35 
   },
     { 
-      name: 'Precious Ohio', 
+      name: 'Prech Ohio', 
       email: 'precious@ohio.com', 
-      phone: '08030512688', 
+      phone: '080388', 
       age: 19 
   },
     { 
       name: 'Dupe Ehiorobho', 
       email: 'dupe@ehiorobho.com', 
-      phone: '08030512688', 
+      phone: '0830512688', 
       age: 22 
   },
     { 
       name: 'Destiny Oraifor', 
       email: 'destiny@oraifor.com', 
-      phone: '08030512688', 
+      phone: '0803051268', 
       age: 31 
   },
     { 
