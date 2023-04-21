@@ -7,7 +7,7 @@ app.use(cors())
 
 const winner = [
   { 
-      name: 'John Olaniyi', 
+      name: 'Johnson Olaniyi', 
       email: 'john@olaniyi.com', 
       phone: '080305688', 
       age: 28 
@@ -36,13 +36,13 @@ const winner = [
       age: 20 
   },
     { 
-      name: 'Yor Igbo', 
+      name: 'Terver Chahur', 
       email: 'terve@igbo.com', 
       phone: '080305126', 
       age: 30 
   },
     { 
-      name: 'Esther Babs', 
+      name: 'Esther Babatunde', 
       email: 'esther@babs.com', 
       phone: '080512688', 
       age: 35 
